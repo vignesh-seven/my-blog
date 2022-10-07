@@ -1,0 +1,23 @@
+---
+const {title, pubDate, url} = Astro.props;
+---
+
+
+<main>
+<time datetime={pubDate}>
+  {new Date(pubDate).toLocaleDateString('en-us', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })}
+</time>
+<a href={url}>
+  <h4>{title}</h4>
+</a>
+</main>
+
+<style>
+  main {
+    background-color: coral;
+  }
+</style>
