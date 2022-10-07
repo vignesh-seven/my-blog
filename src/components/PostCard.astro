@@ -4,23 +4,44 @@ const {title, pubDate, url} = Astro.props;
 
 
 <main>
-<time datetime={pubDate}>
+
+<a href={url}>
+  <span class="title">{title}</span>
+
+<div style="display:flex" class="sub-text">
+<span>posted on&nbsp;</span>
+<span><!-- //datetime={pubDate}> -->
   {new Date(pubDate).toLocaleDateString('en-us', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-  })}
-</time>
-<a href={url}>
-  <h4>{title}</h4>
+  }) } 
+</span>
+</div>
 </a>
 </main>
 
 <style>
   main {
-    
+    min-width: max-content;
+    width: 100%;
+    margin: 3px;
+    padding: 15px;
+    padding-left: 25px;
+    /* border: 3px solid rgb(157, 157, 157); */
+    border-radius: 0.8rem;
+    background-color: rgb(221, 221, 221);
   }
-  time {
+  a {
+    text-decoration: none;
+    color: #5325f8; 
+  }
+  .title {
+    font-size: 1.2em;
+  }
+  .sub-text {
     opacity: 0.7;
+    text-decoration: none;
+    color: black;
   }
 </style>
