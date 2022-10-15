@@ -6,6 +6,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://vignesh-seven.github.io',
-  base: '/my-blog',
+  base: '/',
 	integrations: [mdx(), sitemap()],
 });

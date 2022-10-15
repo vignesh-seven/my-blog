@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Wolf Children Review"
+title: "Review: Wolf Children"
 description: "Review of the anime movie Wolf Children"
 pubDate: "Oct 13 2022"
 #heroImage: "/placeholder-hero.jpg"

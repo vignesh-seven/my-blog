@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Violet Evergarden Review"
+title: "Review: Violet Evergarden"
 description: "Review of the anime Violet Evergarden"
 pubDate: "Oct 09 2022"
 #heroImage: "/placeholder-hero.jpg"
