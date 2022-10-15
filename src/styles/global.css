@@ -32,7 +32,7 @@ b {
 	color: #222;
 }
 a {
-	color: var(--linkColor);
+	/* color: var(--linkColor); */
 }
 nav a {
 	margin-right: 0px;
