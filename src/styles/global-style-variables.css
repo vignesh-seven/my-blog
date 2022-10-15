@@ -1,0 +1,10 @@
+:root {
+	--textColor: #444;
+  --textColorLight: #BBB;
+	--backgroundColor: #FFFBDB;
+	--accentColor: #653239;
+  --backgroundColorDark: #52282F;
+  --linkColor: #80A1D4;
+  --linkColorDark: #345C98;
+  --linkColorLight: #B3C7E5;
+}

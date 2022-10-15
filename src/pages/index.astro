@@ -3,6 +3,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import PostCard from '../components/PostCard.astro';
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
 ---
 
 <!DOCTYPE html>
@@ -20,6 +27,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			<p>
 				I will post about my progress, hobbies, anything I come across that seems interesting to me.
 			</p>
+			<p>
+				Check out the latest post below or click on the Blog button to see all the blogs.
+			</p>
+
+			<h2>Latest Posts</h2>
+			<PostCard title={posts[0].frontmatter.title} pubDate={posts[0].frontmatter.pubDate} url={posts[0].url}/>
+			<PostCard title={posts[1].frontmatter.title} pubDate={posts[1].frontmatter.pubDate} url={posts[1].url}/>
+			<PostCard title={posts[2].frontmatter.title} pubDate={posts[2].frontmatter.pubDate} url={posts[2].url}/>
+
 		</main>
 		<Footer />
 	</body>

@@ -4,6 +4,10 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import "./global-style-variables.css";
+
+
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
@@ -11,11 +15,11 @@ body {
 	padding: 20px;
 	max-width: 55ch;
 	text-align: left;
-	background-color: #fff;
+	background-color: var(--backgroundColor);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+	color: var(--textColor);
 }
 h1,
 h2,
@@ -28,7 +32,7 @@ b {
 	color: #222;
 }
 a {
-	color: #5325f8;
+	color: var(--linkColor);
 }
 nav a {
 	margin-right: 0px;

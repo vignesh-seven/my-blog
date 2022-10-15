@@ -7,22 +7,33 @@ import { SITE_TITLE } from '../config';
 	<h2>
 		{SITE_TITLE}
 	</h2>
+	<!-- <div class="navbar"> -->
 	<nav>
 		<HeaderLink href="/my-blog/">Home</HeaderLink>
 		<HeaderLink href="/my-blog/blogList">Blog</HeaderLink>
 		<HeaderLink href="/my-blog/about">About</HeaderLink>
 		<HeaderLink href="https://github.com/vignesh-seven" target="_blank">GitHub</HeaderLink>
-		<hr>
+		<!-- <hr> -->
 	</nav>
+	<!-- </div> -->
 </header>
 <style>
+	@import "../styles/global-style-variables.css";
+
 	header {
 		margin: 0em 0 1.5em;
 	}
 	h2 {
 		margin: 0.5em 0 1em;
 	}
-	hr {
-		color: #eaeaea;
+	nav {
+		height: 200%;
+		padding: 0;
+		margin: 0;
+		background-color: var(--backgroundColorDark);
+		-moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+		overflow: hidden;
 	}
 </style>

@@ -17,6 +17,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+			@import "../styles/global-style-variables.css";
 			ul {
 				list-style-type: none;
 				padding: unset;
@@ -27,17 +28,20 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			ul li time {
 				flex: 0 0 130px;
 				font-style: italic;
-				color: #595959;
+				color: var(--textColor);
 			}
 			ul li a:visited {
 				color: #8e32dc;
+			}
+			.blog-list {
+				background-color: var(--backgroundColor);
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<section>
+			<div class="blog-list">
 				<ul>
 					{posts.map((post) => (
 						<li>
@@ -56,7 +60,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						</li>
 					))}
 				</ul>
-			</section>
+			</div>
 		</main>
 		<Footer />
 	</body>
